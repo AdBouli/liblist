@@ -17,15 +17,15 @@ liblist.a: $(OBJSRC)
 test: liblist.a $(OBJTEST)
 	$(CC) -o runtest $(OBJTEST) $<
 
--include depends.txt
+-include src/depends.txt
 -include test/depends.txt
 
-depends.txt: $(SRC)
-	$(CC) -MM $(CPPFLAGS) $^ > depends.txt
+src/depends.txt: $(SRC)
+	$(CC) -MM $(CPPFLAGS) $^ > src/depends.txt
 
 test/depends.txt: $(TEST)
 	$(CC) -MM $(CPPFLAGS) $^ > test/depends.txt
 
 .PHONY : clean
 clean:
-	rm -f liblist.a depends.txt test/depends.txt $(OBJSRC) $(OBJTEST) runtest
+	rm -f liblist.a src/depends.txt test/depends.txt $(OBJSRC) $(OBJTEST) runtest
