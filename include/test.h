@@ -3,5 +3,6 @@
 
 bool test_array ();
 bool test_slist ();
+bool test_slist_func ();
 
 #endif /* TEST_H */

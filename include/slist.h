@@ -17,17 +17,17 @@ void slist_free (SList list);
 
 void slist_destroy (SList list);
 
-SList slist_prepend (SList list, data_type value);
+SList slist_prepend (SList list, data_type data);
 
 SList slist_delete_first (SList list);
 
-SList slist_insert_after (SList list, SList p, data_type value);
+SList slist_insert_after (SList list, SList p, data_type data);
 
 SList slist_delete_after (SList list, SList p);
 
 SList slist_next (SList list);
 
-data_type slist_value (SList list);
+data_type slist_data (SList list);
 
 bool slist_is_empty (SList list);
 

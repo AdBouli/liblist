@@ -9,6 +9,7 @@ int main (int argc, char const *argv[])
 
 	result = test_array() && result;
 	result = test_slist() && result;
+	result = test_slist_func() && result;
 
 	if (result)
 	{
