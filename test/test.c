@@ -8,11 +8,12 @@ int main (int argc, char const *argv[])
 	bool result = true;
 
 	result = test_array() && result;
+	result = test_slist() && result;
 
 	if (result)
 	{
 		printf("=== Tests réussis! ===\n");
 	}
-	
+
 	return EXIT_SUCCESS;
 }

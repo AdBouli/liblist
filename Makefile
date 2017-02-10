@@ -11,6 +11,9 @@ OBJTEST = $(TEST:.c=.o)
 all: liblist.a test
 	./runtest
 
+memory_test: test
+	valgrind --leak-check=full ./runtest
+
 liblist.a: $(OBJSRC)
 	ar -rs $@ $^
 
